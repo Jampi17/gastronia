@@ -24,17 +24,6 @@ main {
     margin: 0;
 }
 
-/*a {
-    text-decoration: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 2px;
-    padding-right: 2px;
-    width: 100px;
-    text-align: left;
-    text-align: right;
-    border: transparent;
-}*/
 
 .custom-header {
     position: fixed;
@@ -248,20 +237,21 @@ main {
     background-repeat: no-repeat;
 }
 
-.banner1 {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+.banner img {
+    max-height: 600px;
+}
+
+.content_banner1 {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content_banner {
+    color: azure;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    background-image: url(imagenes/573176.jpg);
-    background-repeat: no-repeat;
-}
-
-.banner img {
-    max-height: 600px;
 }
 
 .encabezado_uno {
@@ -297,19 +287,6 @@ main {
     font-size: 90px;
 }
 
-.content_banner {
-    color: azure;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.content_banner1 {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-}
-
 @media (max-width: 768px) {
     .banner {
         height: 700px;
@@ -335,6 +312,165 @@ main {
         /* Usar el ancho completo en dispositivos móviles */
     }
 }
+
+/*martin codax*/
+.banner_martin_codax {
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imagenes/Foto\ Bodega\ Martín\ Codax.jpg);
+    background-repeat: no-repeat;
+}
+
+.banner_martin_codax img {
+    max-height: 600px;
+}
+
+.content_banner1_martin_codax {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content_banner_martin_codax {
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.encabezado_uno {
+    display: flex;
+}
+
+.encabezado_1 {
+    color: #8c6c4c;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.encabezado_dos {
+    display: flex;
+}
+
+.encabezado_2 {
+    color: #FFF;
+    font-family: 'Charm', cursive;
+    font-size: 50px;
+}
+
+@media (max-width: 768px) {
+    .banner_martin_codax {
+        height: 700px;
+        /* Ajustar la altura automáticamente */
+    }
+
+    .banner_martin_codax img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .encabezado_uno {
+        text-align: center;
+    }
+
+    .encabezado_2 {
+        font-size: 40px;
+        /* Reducir el tamaño del texto para dispositivos móviles */
+    }
+
+    .content_banner1_martin_codax {
+        width: 90%;
+        /* Usar el ancho completo en dispositivos móviles */
+    }
+}
+/*baigorti*/
+
+.banner_baigorti {
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imagenes/Foto\ Bodega\ Martín\ Codax.jpg);
+    background-repeat: no-repeat;
+}
+
+.banner_baigorti img {
+    max-height: 600px;
+}
+
+.content_banner1_baigorti {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content_banner_baigorti {
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.encabezado_uno {
+    display: flex;
+}
+
+.encabezado_1 {
+    color: #8c6c4c;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.encabezado_dos {
+    display: flex;
+}
+
+.encabezado_2 {
+    color: #FFF;
+    font-family: 'Charm', cursive;
+    font-size: 50px;
+}
+
+@media (max-width: 768px) {
+    .banner__baigorti {
+        height: 700px;
+        /* Ajustar la altura automáticamente */
+    }
+
+    .banner__baigorti img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .encabezado_uno {
+        text-align: center;
+    }
+
+    .encabezado_2 {
+        font-size: 40px;
+        /* Reducir el tamaño del texto para dispositivos móviles */
+    }
+
+    .content_banner1_baigorti {
+        width: 90%;
+        /* Usar el ancho completo en dispositivos móviles */
+    }
+}
+
 
 /*lines y espacio*/
 .espacio_modelos {
@@ -645,14 +781,12 @@ textarea {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px;
-    background-image: url(imagenes/banlogo.jpg);
-    background-size: cover;
-    height: 900px;
+    padding: 50px;
+    background-color: #000;
 }
 
 .logo-container {
-    width: 80%;
+    width: 85%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -721,6 +855,7 @@ textarea {
     background-image: url(imagenes/banlogo.jpg);
     background-repeat: no-repeat;
 }
+
 /*vinos */
 .conten_vinos {
     display: flex;
@@ -740,8 +875,9 @@ textarea {
 .encabezado_vino h2 {
     text-align: center;
 }
-.contenido_vino{
-/*background-color: #dfdfdf;*/
+
+.contenido_vino {
+    /*background-color: #dfdfdf;*/
 }
 
 .info_vinos {
@@ -752,11 +888,11 @@ textarea {
     align-items: center;
 }
 
-.info_vinos > div {
+.info_vinos>div {
     padding: 5px;
 }
 
-.info_vinos > div:last-child {
+.info_vinos>div:last-child {
     background-color: black;
     color: white;
     width: 50%;
