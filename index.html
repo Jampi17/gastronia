@@ -90,39 +90,6 @@
         </div>
       </div>
     </div>
-    <script>
-      let bannerCount = 0;
-      let banners = document.getElementsByClassName("banner");
-      let previousButton = document.querySelector("#previousButton");
-      let nextButton = document.querySelector("#nextButton");
-
-      previousButton.addEventListener("click", function () {
-        let current = bannerCount;
-
-        if (current === 0) {
-          bannerCount = banners.length - 1;
-        } else {
-          bannerCount--;
-        }
-
-        banners[current].classList.remove("show");
-        banners[bannerCount].classList.add("show");
-      });
-
-      nextButton.addEventListener("click", function () {
-        let current = bannerCount;
-        console.log(current);
-
-        if (current === banners.length - 1) {
-          bannerCount = 0;
-        } else {
-          bannerCount++;
-        }
-
-        banners[current].classList.remove("show");
-        banners[bannerCount].classList.add("show");
-      });
-    </script>
   </section>
 
   <section class="center-container">
@@ -270,7 +237,39 @@
       </div>
     </div>
   </section>
+  <script>
+    let bannerCount = 0;
+    let banners = document.getElementsByClassName("banner");
+    let previousButton = document.querySelector("#previousButton");
+    let nextButton = document.querySelector("#nextButton");
 
+    previousButton.addEventListener("click", function () {
+      let current = bannerCount;
+
+      if (current === 0) {
+        bannerCount = banners.length - 1;
+      } else {
+        bannerCount--;
+      }
+
+      banners[current].classList.remove("show");
+      banners[bannerCount].classList.add("show");
+    });
+
+    nextButton.addEventListener("click", function () {
+      let current = bannerCount;
+      console.log(current);
+
+      if (current === banners.length - 1) {
+        bannerCount = 0;
+      } else {
+        bannerCount++;
+      }
+
+      banners[current].classList.remove("show");
+      banners[bannerCount].classList.add("show");
+    });
+  </script>
 </body>
 
 </html>
