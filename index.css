@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 *,
 *::before,
@@ -233,8 +234,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(imagenes/573176.jpg);
+    background-image: url(imagenes/Foto\ bodega\ Baigorri\ negro.jpg);
     background-repeat: no-repeat;
+    position: relative;
+    top: 15px;
 }
 
 .banner img {
@@ -242,9 +245,10 @@ main {
 }
 
 .content_banner1 {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .content_banner {
@@ -252,6 +256,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
+    width: 30%;
+    height: 350px;
+    padding-left: 40px;
+    position: relative;
+    right: 35px;
 }
 
 .encabezado_uno {
@@ -313,164 +323,6 @@ main {
     }
 }
 
-/*martin codax*/
-.banner_martin_codax {
-    height: 700px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(imagenes/Foto\ Bodega\ Martín\ Codax.jpg);
-    background-repeat: no-repeat;
-}
-
-.banner_martin_codax img {
-    max-height: 600px;
-}
-
-.content_banner1_martin_codax {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.content_banner_martin_codax {
-    color: azure;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.encabezado_uno {
-    display: flex;
-}
-
-.encabezado_1 {
-    color: #8c6c4c;
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-.encabezado_dos {
-    display: flex;
-}
-
-.encabezado_2 {
-    color: #FFF;
-    font-family: 'Charm', cursive;
-    font-size: 50px;
-}
-
-@media (max-width: 768px) {
-    .banner_martin_codax {
-        height: 700px;
-        /* Ajustar la altura automáticamente */
-    }
-
-    .banner_martin_codax img {
-        max-height: 100%;
-        max-width: 100%;
-    }
-
-    .encabezado_uno {
-        text-align: center;
-    }
-
-    .encabezado_2 {
-        font-size: 40px;
-        /* Reducir el tamaño del texto para dispositivos móviles */
-    }
-
-    .content_banner1_martin_codax {
-        width: 90%;
-        /* Usar el ancho completo en dispositivos móviles */
-    }
-}
-/*baigorti*/
-
-.banner_baigorti {
-    height: 700px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(imagenes/Foto\ Bodega\ Martín\ Codax.jpg);
-    background-repeat: no-repeat;
-}
-
-.banner_baigorti img {
-    max-height: 600px;
-}
-
-.content_banner1_baigorti {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.content_banner_baigorti {
-    color: azure;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.encabezado_uno {
-    display: flex;
-}
-
-.encabezado_1 {
-    color: #8c6c4c;
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-.encabezado_dos {
-    display: flex;
-}
-
-.encabezado_2 {
-    color: #FFF;
-    font-family: 'Charm', cursive;
-    font-size: 50px;
-}
-
-@media (max-width: 768px) {
-    .banner__baigorti {
-        height: 700px;
-        /* Ajustar la altura automáticamente */
-    }
-
-    .banner__baigorti img {
-        max-height: 100%;
-        max-width: 100%;
-    }
-
-    .encabezado_uno {
-        text-align: center;
-    }
-
-    .encabezado_2 {
-        font-size: 40px;
-        /* Reducir el tamaño del texto para dispositivos móviles */
-    }
-
-    .content_banner1_baigorti {
-        width: 90%;
-        /* Usar el ancho completo en dispositivos móviles */
-    }
-}
-
 
 /*lines y espacio*/
 .espacio_modelos {
@@ -485,7 +337,7 @@ main {
 
 /*fotter*/
 .custom_footer {
-    background-color: #120e0b;
+    background-color: #000;
     color: white
 }
 
@@ -781,7 +633,7 @@ textarea {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     background-color: #000;
 }
 
@@ -876,9 +728,6 @@ textarea {
     text-align: center;
 }
 
-.contenido_vino {
-    /*background-color: #dfdfdf;*/
-}
 
 .info_vinos {
     text-align: center;
@@ -898,4 +747,108 @@ textarea {
     width: 50%;
     padding: 5px;
     text-align: center;
+}
+
+/*banner slider*/
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .wrapper .carousel {
+    position: relative;
+  }
+  
+  .carousel .carousel-buttons {
+    width: 100%;
+    top: 40%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .carousel .carousel-buttons div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    transition: all 100ms ease;
+    z-index: 1;
+  }
+  
+  .carousel .carousel-buttons div:hover {
+    color: #ffffff;
+    background: #000000;
+  }
+  
+  .wrapper .carousel .banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  
+  .wrapper .carousel .banner.show {
+    opacity: 1;
+    position: relative;
+    left: 0;
+    animation-name: slideIn;
+    animation-duration: 1s;
+  }
+  
+  .wrapper .carousel .banner img {
+    width: 100%;
+  }
+  
+  @keyframes slideIn {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  /*btn what*/
+  .btn-wsp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 63px;
+    bottom: 25px;
+    right: 100px;
+    background: #25d366;
+    color: #FFF;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 300ms ease;
+}
+
+.btn-wsp1 {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 63px;
+    bottom: 25px;
+    right: 25px;
+    background: white;
+    color: #FFF;
+    border: #000 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 300ms ease;
 }

@@ -7,11 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jampi webs</title>
   <link rel="stylesheet" href="index.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
+  <script src="https://kit.fontawesome.com/fd6428d3fa.js" crossorigin="anonymous"></script>
+  <a href="https://api.whatsapp.com/send?phone=+51" class="btn-wsp1" target="_blank">
+    <i class="fa-solid fa-wine-glass" style="color: #000000;"></i>
+  </a>
   <section class="custom-header">
-    <div class="custom-logo"><img src="imagenes/LOGO GASTRONIA NEGRO JGP.jpg" alt=".." /></div>
+    <div class="custom-logo"><img src="imagenes/LOGO GASTRONIA NEGRO PNG.png" alt=".." /></div>
     <input type="checkbox" id="custom-toggle-nav">
     <label for="custom-toggle-nav"><img src="imagenes/menu.svg" class="custom-menu" alt=".." /></label>
     <nav class="custom-navigation">
@@ -55,99 +63,158 @@
     </nav>
   </section>
 
+  <section style="height: 55px;"></section>
 
-  <section class="banner">
-    <div class="content_banner1">
-      <div class="content_banner">
-        <div class="encabezado_uno">
-          <span class="encabezado_1">INTRODUCING VILLENOIR WINES</span>
+  <section>
+    <div class="wrapper">
+      <div class="carousel">
+        <div class="carousel-buttons">
+          <div id="previousButton">
+            <span class="material-icons">arrow_back</span>
+          </div>
+          <div id="nextButton">
+            <span class="material-icons">arrow_forward</span>
+          </div>
         </div>
-        <div class="encabezado_dos">
-          <span class="encabezado_2"><em>Refinement</em></span>
+        <div class="banner show">
+          <img src="imagenes/Foto bodega Matias Riccitelli.jpg" alt="" />
         </div>
-        <div class="encabezado_tres">
-          <span class="encabezado_3">in a bottle</span>
+        <div class="banner">
+          <img src="imagenes/Foto Bodega El Nido.jpg" alt="" />
         </div>
-      </div>
-      <div>
-        <img id="mi-imagen" src="imagenes/vino banner.jpg" alt="...">
+        <div class="banner">
+          <img src="imagenes/Foto bodega Baigorri.jpg" alt="" />
+        </div>
+        <div class="banner">
+          <img src="imagenes/Foto Bodega Martín Codax.jpg" alt="" />
+        </div>
       </div>
     </div>
+    <script>
+      let bannerCount = 0;
+      let banners = document.getElementsByClassName("banner");
+      let previousButton = document.querySelector("#previousButton");
+      let nextButton = document.querySelector("#nextButton");
+
+      previousButton.addEventListener("click", function () {
+        let current = bannerCount;
+
+        if (current === 0) {
+          bannerCount = banners.length - 1;
+        } else {
+          bannerCount--;
+        }
+
+        banners[current].classList.remove("show");
+        banners[bannerCount].classList.add("show");
+      });
+
+      nextButton.addEventListener("click", function () {
+        let current = bannerCount;
+        console.log(current);
+
+        if (current === banners.length - 1) {
+          bannerCount = 0;
+        } else {
+          bannerCount++;
+        }
+
+        banners[current].classList.remove("show");
+        banners[bannerCount].classList.add("show");
+      });
+    </script>
   </section>
 
   <section class="center-container">
     <div class="logo-container" style="width: 80%;">
       <div class="logo">
-        <a href="01_Martin_codax.html"><img src="imagenes/LOGOS BODEGAS WEB/1 MARTIN CODAX/LOGO MARTIN CODAX PNG.png" alt="Logo 1"></a>
+        <a href="01_Martin_codax.html"><img src="imagenes/LOGOS BODEGAS WEB/1 MARTIN CODAX/LOGO MARTIN CODAX PNG.png"
+            alt="Logo 1"></a>
       </div>
       <div class="logo">
-        <a href="02_Bodegas_baigorri.html"><img src="imagenes/LOGOS BODEGAS WEB/2 BODEGAS BAIGORRI/LOGO BAIGORRI PNG.png" alt="Logo 2"></a>
+        <a href="02_Bodegas_baigorri.html"><img
+            src="imagenes/LOGOS BODEGAS WEB/2 BODEGAS BAIGORRI/LOGO BAIGORRI PNG.png" alt="Logo 2"></a>
       </div>
       <div class="logo">
-        <a href="03_LaFou_Terra_Alta.html"><img src="imagenes/LOGOS BODEGAS WEB/3 LAFOU TERRA ALTA/LOGO LAFOU PNG.png" alt="Logo 3"></a>
+        <a href="03_LaFou_Terra_Alta.html"><img src="imagenes/LOGOS BODEGAS WEB/3 LAFOU TERRA ALTA/LOGO LAFOU PNG.png"
+            alt="Logo 3"></a>
       </div>
       <div class="logo">
-        <a href="04_Massaluca.html"><img src="imagenes/LOGOS BODEGAS WEB/3 LAFOU TERRA ALTA/LOGO MASSALUCA PNG.png" alt="Logo 4"></a>
+        <a href="04_Massaluca.html"><img src="imagenes/LOGOS BODEGAS WEB/3 LAFOU TERRA ALTA/LOGO MASSALUCA PNG.png"
+            alt="Logo 4"></a>
       </div>
       <div class="logo">
-        <a href="05_La_picosa.html"><img src="imagenes/LOGOS BODEGAS WEB/3 LAFOU TERRA ALTA/LOGO PICOSSA PNG.png" alt="Logo 5"></a>
+        <a href="05_La_picosa.html"><img src="imagenes/LOGOS BODEGAS WEB/3 LAFOU TERRA ALTA/LOGO PICOSSA PNG.png"
+            alt="Logo 5"></a>
       </div>
       <div class="logo">
-        <a href="06_Juan_Gil.html"><img src="imagenes/LOGOS BODEGAS WEB/4 JUAN GIL/LOGO JUAN GIL - PNG.png" alt="Logo 6"></a>
-      </div>
-    </div>
-    <br>
-    <div class="logo-container" style="width: 80%;">
-      <div class="logo">
-        <a href="07_El_Nido.html"><img src="imagenes/LOGOS BODEGAS WEB/5 EL NIDO/LOGO BODEGAS NIDO PNG.png" alt="Logo 7"></a>
-      </div>
-      <div class="logo">
-        <a href="08_Honoro_Vera.html"><img src="imagenes/LOGOS BODEGAS WEB/6 HONORO VERA/LOGO HONORO VERA PNG.png" alt="Logo 8"></a>
-      </div>
-      <div class="logo">
-        <a href="09_Bodegas_Atalaya.html"><img src="imagenes/LOGOS BODEGAS WEB/7 BODEGAS ATALAYA/LOGO ATALAYA PNG.png" alt="Logo 9"></a>
-      </div>
-      <div class="logo">
-        <a href="10_Bodegas_Tridente.html"><img src="imagenes/LOGOS BODEGAS WEB/8 BODEGAS TRIDENTE/LOGO TRIDENTE PNG.png" alt="Logo 10"></a>
-      </div>
-      <div class="logo">
-        <a href="11_José_Estévez.html"><img src="imagenes/LOGOS BODEGAS WEB/9 JOSE ESTEVEZ/LOGO JOSE ESTEVEZ PNG.png" alt="Logo 11"></a>
-      </div>
-      <div class="logo">
-        <a href="12_Grandes_vinos.html"><img src="imagenes/LOGOS BODEGAS WEB/BODEGA GRANDES VINOS/LOGO GRANDES VINOS PNG.png" alt="Logo 12"></a>
+        <a href="06_Juan_Gil.html"><img src="imagenes/LOGOS BODEGAS WEB/4 JUAN GIL/LOGO JUAN GIL - PNG.png"
+            alt="Logo 6"></a>
       </div>
     </div>
     <br>
     <div class="logo-container" style="width: 80%;">
       <div class="logo">
-        <a href="13_Monasterios_la_viñas.html"><img src="imagenes/LOGOS BODEGAS WEB/10 MONASTERIO DE LAS VIÑAS/LOGO MONASTERIO DE LAS VIÑAS PNG.png"
-          alt="Logo 13"></a>
+        <a href="07_El_Nido.html"><img src="imagenes/LOGOS BODEGAS WEB/5 EL NIDO/LOGO BODEGAS NIDO PNG.png"
+            alt="Logo 7"></a>
       </div>
       <div class="logo">
-        <a href="14_El_circo.html"><img src="imagenes/LOGOS BODEGAS WEB/11 EL CIRCO/LOGO CIRCO PNG.png" alt="Logo 14"></a>
+        <a href="08_Honoro_Vera.html"><img src="imagenes/LOGOS BODEGAS WEB/6 HONORO VERA/LOGO HONORO VERA PNG.png"
+            alt="Logo 8"></a>
+      </div>
+      <div class="logo">
+        <a href="09_Bodegas_Atalaya.html"><img src="imagenes/LOGOS BODEGAS WEB/7 BODEGAS ATALAYA/LOGO ATALAYA PNG.png"
+            alt="Logo 9"></a>
+      </div>
+      <div class="logo">
+        <a href="10_Bodegas_Tridente.html"><img
+            src="imagenes/LOGOS BODEGAS WEB/8 BODEGAS TRIDENTE/LOGO TRIDENTE PNG.png" alt="Logo 10"></a>
+      </div>
+      <div class="logo">
+        <a href="11_José_Estévez.html"><img src="imagenes/LOGOS BODEGAS WEB/9 JOSE ESTEVEZ/LOGO JOSE ESTEVEZ PNG.png"
+            alt="Logo 11"></a>
+      </div>
+      <div class="logo">
+        <a href="12_Grandes_vinos.html"><img
+            src="imagenes/LOGOS BODEGAS WEB/BODEGA GRANDES VINOS/LOGO GRANDES VINOS PNG.png" alt="Logo 12"></a>
+      </div>
+    </div>
+    <br>
+    <div class="logo-container" style="width: 80%;">
+      <div class="logo">
+        <a href="13_Monasterios_la_viñas.html"><img
+            src="imagenes/LOGOS BODEGAS WEB/10 MONASTERIO DE LAS VIÑAS/LOGO MONASTERIO DE LAS VIÑAS PNG.png"
+            alt="Logo 13"></a>
+      </div>
+      <div class="logo">
+        <a href="14_El_circo.html"><img src="imagenes/LOGOS BODEGAS WEB/11 EL CIRCO/LOGO CIRCO PNG.png"
+            alt="Logo 14"></a>
       </div>
       <div class="logo">
         <a href="15_Lolea.html"><img src="imagenes/LOGOS BODEGAS WEB/12 LOLEA/LOGO LOLEA PNG.png" alt="Logo 15"></a>
       </div>
       <div class="logo">
-        <a href="16_Lolailo.html"><img src="imagenes/LOGOS BODEGAS WEB/13 LOLAILO/LOGO LOLAILO PNG.png" alt="Logo 16"></a>
+        <a href="16_Lolailo.html"><img src="imagenes/LOGOS BODEGAS WEB/13 LOLAILO/LOGO LOLAILO PNG.png"
+            alt="Logo 16"></a>
       </div>
       <div class="logo">
-        <a href="17_Gaitero.html"><img src="imagenes/LOGOS BODEGAS WEB/14 EL GAITERO/LOGO EL GAITERO PNG.png" alt="Logo 17"></a>
+        <a href="17_Gaitero.html"><img src="imagenes/LOGOS BODEGAS WEB/14 EL GAITERO/LOGO EL GAITERO PNG.png"
+            alt="Logo 17"></a>
       </div>
       <div class="logo">
-        <a href="18_Matias_riccitelli.html"><img src="imagenes/LOGOS BODEGAS WEB/18 BODEGAS MATIAS RICCITELLI/LOGO MATIAS RICCITELLI PNG.png" alt="Logo 18"</a>>
+        <a href="18_Matias_riccitelli.html"><img
+            src="imagenes/LOGOS BODEGAS WEB/18 BODEGAS MATIAS RICCITELLI/LOGO MATIAS RICCITELLI PNG.png"
+            alt="Logo 18"></a>
       </div>
     </div>
-
-
   </section>
+
   <section class="espacio_modelos"></section>
   <section>
     <div class="formulario_conten1">
       <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
         <div class="formulario_conten_parte1">
-          <h1>FORMULARIO DE CONTACTO</h1>
+          <h1 style="color: black;">FORMULARIO DE CONTACTO</h1>
         </div>
       </div>
       <div class="formulario_data">
@@ -157,10 +224,9 @@
             <input type="email" placeholder="Correo Electrónico">
             <input type="tel" placeholder="Celular">
             <input type="checkbox" id="terminos" name="terminos">
-            <label class="wpcf7-list-item-label">Acepta el
+            <label class="wpcf7-list-item-label">He leído y estoy de acuerdo con los 
               <a href="https://loscoches.com/wp-content/uploads/2019/07/politica-de-proteccion-de-datos-personales-v4.pdf"
-                target="_blank" rel="noopener" style="color: #8c6c4c ;">Tratamiento de Datos
-                y Política de Privacidad.</a></label>
+                target="_blank" rel="noopener" style="color: #8c6c4c ;">Terminos y condiciones.</a></label>
             <br>
             <br>
             <input type="submit" value="Enviar" class="custom-submit-button">
@@ -176,9 +242,9 @@
 
   <section class="custom_footer">
     <div class="footer-box1 ">
-      <span class="encabezado_1">VELLENOIR PROMISE</span>
+      <img src="imagenes/icons8-vino-y-uvas-64.png" alt="">
       <br>
-      <span class="encabezado_3" style="font-size: 50px;">We make good wines</span>
+      <span class="encabezado_3" style="font-size: 50px;">Vinos que cuentan historias</span>
     </div>
     <div class="footer_1">
       <div class="col_foo_1">
